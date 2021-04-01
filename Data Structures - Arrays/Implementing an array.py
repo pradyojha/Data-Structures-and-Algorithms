@@ -1,4 +1,4 @@
-class MyArray:
+class Array:
   def __init__(self):
     self.length=0
     self.data={}
@@ -6,6 +6,9 @@ class MyArray:
   def __str__(self):
     return str(self.__dict__)
 
+  def get(self,index):
+    return self.data[index]
+  
   def push(self,item):
     self.data[self.length]=item
     self.length+=1
@@ -25,11 +28,7 @@ class MyArray:
     self.length-=1
     return deleteditem
 
-
-
-  
-
-arr=MyArray()
+arr=Array()
 arr.push(3)
 arr.push('hi')
 arr.push(34)
